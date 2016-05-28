@@ -32,7 +32,7 @@ app.factory ('Auth', function(FURL, $firebaseAuth, $state) {
 
 	}
 	auth.$onAuth(function(authData){
-		if(auth){
+		if(authData){
 			Auth.user = authData;
 			console.log('the user has already logged in'); 
 			$state.go('tab.dash');
